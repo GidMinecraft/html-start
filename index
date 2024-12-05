@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навчання HTML: Просте пояснення</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 300px;
+        }
+        .code {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        .result {
+            background: #e8f5e9;
+            padding: 10px;
+            border: 1px solid #c8e6c9;
+            border-radius: 5px;
+        }
+        header {
+            width: 100%;
+            background: #f1f1f1;
+            padding: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+        h1, h2 {
+            color: #2e7d32;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fdfdfd;
+        }
+        .image-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-container img {
+            width: 500px; /* Увеличим изображение */
+            height: auto;
+            border-radius: 10px;
+        }
+        .example-text {
+            font-weight: bold;
+            color: #2e7d32;
+            padding: 10px;
+            max-width: 500px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- обьяснение структуры -->
+    <div class="container">
+        <div class="section">
+            <h2>1. Основна структура HTML</h2>
+            <p>Кожен HTML-документ починається з цієї структури:</p>
+            <div class="code">
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;<br>
+                &nbsp;&nbsp;&lt;head&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Назва сторінки&lt;/title&gt;<br>
+                &nbsp;&nbsp;&lt;/head&gt;<br>
+                &nbsp;&nbsp;&lt;body&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Це звичайний текст.&lt;/p&gt;<br>
+                &nbsp;&nbsp;&lt;/body&gt;<br>
+                &lt;/html&gt;
+            </div>
+            <p><b>Пояснення:</b></p>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code>: вказує браузеру, що використовується HTML5</li>
+                <li><code>&lt;html&gt;</code>: початок HTML-документа</li>
+                <li><code>&lt;head&gt;</code>: метадані сайту, наприклад, кодування чи назва вкладки</li>
+                <li><code>&lt;body&gt;</code>: все, що бачить користувач на сторінці</li>
+            </ul>
+        </div>
+
+        <!-- Приклад заголовків -->
+        <div class="section">
+            <h2>2. Заголовки</h2>
+            <p>Для створення заголовків використовуються теги від <code>&lt;h1&gt;</code> до <code>&lt;h6&gt;</code>. Чим більше число, тим менший заголовок.</p>
+            <div class="image-container">
+                <div>
+                    <h1>Заголовок 1 рівня</h1>
+                    <h2>Заголовок 2 рівня</h2>
+                    <h3>Заголовок 3 рівня</h3>
+                </div>
+                <img src="https://i.ibb.co/wBfJ8zy/bbbb.jpg" alt="Так виглядає код">
+            </div>
+            <p><b>Пояснення:</b></p>
+            <ul>
+                <li><code>&lt;h1&gt;</code>: найважливіший заголовок</li>
+                <li><code>&lt;h2&gt;</code>: заголовок другого рівня</li>
+                <li><code>&lt;h3&gt;</code>: заголовок третього рівня</li>
+            </ul>
+            <div class="example-text">
+                Приклад заголовків:
+                <pre>&lt;h1&gt;Заголовок 1 рівня&lt;/h1&gt;</pre>
+                <pre>&lt;h2&gt;Заголовок 2 рівня&lt;/h2&gt;</pre>
+                <pre>&lt;h3&gt;Заголовок 3 рівня&lt;/h3&gt;</pre>
+            </div>
+        </div>
+
+        <!-- Приклад тексту -->
+        <div class="section">
+            <h2>3. Текст та абзаци</h2>
+            <p>Текст на сайті пишеться за допомогою тегу <code>&lt;p&gt;</code>. Форматування можливе за допомогою:</p>
+            <ul>
+                <li><code>&lt;b&gt;</code>: жирний текст</li>
+                <li><code>&lt;i&gt;</code>: курсив</li>
+                <li><code>&lt;u&gt;</code>: підкреслений текст</li>
+            </ul>
+            <div class="code">
+                &lt;p&gt;Це звичайний текст.&lt;/p&gt;<br>
+                &lt;p&gt;Це теж.&lt;/p&gt;<br>
+                &lt;p&gt;&lt;b&gt;Жирний текст&lt;/b&gt;, &lt;i&gt;курсив&lt;/i&gt;, &lt;u&gt;підкреслений&lt;/u&gt;&lt;/p&gt;<br>
+                &lt;p style="text-align: center;"&gt;Цей текст знаходиться по центру.&lt;/p&gt;<br>
+                &lt;p style="font-size: 24px;"&gt;Цей текст має збільшений шрифт.&lt;/p&gt;<br>
+                &lt;p style="font-size: 150%;"&gt;Цей текст на 150% більший за стандартний розмір.&lt;/p&gt;
+            </div>
+            <div class="image-container">
+                <div>
+                    <p>Це звичайний текст.</p>
+                    <p>Це теж.</p>
+                    <p><b>Жирний текст</b>, <i>курсив</i>, <u>підкреслений</u></p>
+                    <p style="text-align: center;">Цей текст знаходиться по центру.</p>
+                    <p style="font-size: 24px;">Цей текст має збільшений шрифт.</p>
+                    <p style="font-size: 150%;">Цей текст на 150% більший за стандартний розмір.</p>
+                </div>
+                <img src="https://i.ibb.co/0FRybd9/vvvvv.jpg" alt="Приклад форматованого тексту">
+            </div>
+        </div>
+
+        <!-- Приклад посилання с изображением -->
+        <div class="section">
+            <h2>4. Посилання</h2>
+            <p>Посилання створюються за допомогою тегу <code>&lt;a&gt;</code>:</p>
+            <div class="code">
+                &lt;a href="https://www.instagram.com/vadim_verhulevsky"&gt;Мой Instagram &lt;/a&gt;
+            </div>
+            <div class="result">
+                <a href="https://www.instagram.com/vadim_verhulevsky">
+                    Мой Instagram
+                </a>
+            </div>
+              <div class="image-container">
+                <img src="https://i.ibb.co/rMJ0xBp/ccccc.jpg" alt="Instagram Icon">
+              </div>
+        </div>
+
+        <!-- Приклад зображення -->
+        <div class="section">
+            <h2>5. Зображення</h2>
+            <p>Зображення можна вставляти за допомогою тегу <code>&lt;img&gt;</code>:</p>
+            <div class="code">
+                &lt;img src="пряме url_картинки" /&gt;
+            </div>
+            <div class="result">
+                <img src="https://i.ibb.co/RgDRMYk/image.jpg" alt="Зображення HTML"  style="width: 400px; height: 400px; vertical-align: middle; margin-left: 10px; font-size: 150%;">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
